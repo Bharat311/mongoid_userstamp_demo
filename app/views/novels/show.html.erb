@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @novel.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @novel.description %>
+</p>
+
+<p>
+  <b>Created By:</b>
+  <%= @novel.creator.try(:email) %>
+</p>
+
+<p>
+  <b>Updated By:</b>
+  <%= @novel.updater.try(:email) %>
+</p>
+
+<%= link_to 'Edit', edit_novel_path(@novel) %> |
+<%= link_to 'Back', novels_path %>

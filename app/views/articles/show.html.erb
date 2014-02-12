@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%= @article.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @article.body %>
+</p>
+
+<p>
+  <b>Created By:</b>
+  <%= @article.creator.try(:email) %>
+</p>
+
+<p>
+  <b>Updated By:</b>
+  <%= @article.updater.try(:email) %>
+</p>
+
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>

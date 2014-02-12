@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mongoid Userstamp Demo App</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <%= link_to 'Dashboard', index_path %>
+
+  <%- if admin_signed_in? %>
+    <%= current_admin.email %>
+    <%= link_to 'Logout', destroy_admin_session_path, method: :delete %>
+  <% end %>
+
+  <%- if visitor_signed_in? %>
+    <%= current_visitor.email %>
+    <%= link_to 'Logout', destroy_visitor_session_path, method: :delete %>
+  <% end %>
+
+  <%- if user_signed_in? %>
+    <%= current_user.email %>
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+  <% end %>
+
+  <hr />
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <%= yield %>
+
+</body>
+</html>
