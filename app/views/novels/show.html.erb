@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <b>Title:</b>
   <%= @novel.title %>
@@ -12,12 +10,12 @@
 
 <p>
   <b>Created By:</b>
-  <%= @novel.creator.try(:email) %>
+  <%= @novel.writer.try(:email) %>
 </p>
 
 <p>
   <b>Updated By:</b>
-  <%= @novel.updater.try(:email) %>
+  <%= @novel.editor.try(:email) %>
 </p>
 
 <%= link_to 'Edit', edit_novel_path(@novel) %> |

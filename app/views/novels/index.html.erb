@@ -4,8 +4,8 @@
   <tr>
     <th>Title</th>
     <th>Description</th>
-    <th>Created By</th>
-    <th>Updated By</th>
+    <th>Written By</th>
+    <th>Edited By</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,8 +15,8 @@
   <tr>
     <td><%= novel.title %></td>
     <td><%= novel.description %></td>
-    <td><%= novel.creator.try(:email) || '-' %></td>
-    <td><%= novel.updater.try(:email) || '-' %></td>
+    <td><%= novel.writer.try(:email) || '-' %></td>
+    <td><%= novel.editor.try(:email) || '-' %></td>
     <td><%= link_to 'Show', novel %></td>
     <td><%= link_to 'Edit', edit_novel_path(novel) %></td>
     <td><%= link_to 'Destroy', novel, method: :delete, data: { confirm: 'Are you sure?' } %></td>

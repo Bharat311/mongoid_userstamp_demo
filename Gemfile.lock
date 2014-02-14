@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/Bharat311/mongoid_userstamp.git
-  revision: dbaaaf93342a2b533fcb1b608f6b67716e5fef01
+  revision: 3321cc021eb9e0f1047fe317e5d0031cf601c919
   specs:
     mongoid_userstamp (0.3.2)
       mongoid (>= 3.0.4)
